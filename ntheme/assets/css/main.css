@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #1a1a1a;    /* Deep black/dark grey for backgrounds that contrast with yellow */
+  --background-color: #9c9c9c;    /* Deep black/dark grey for backgrounds that contrast with yellow */
   --default-color: #ffffff;      /* White text on dark backgrounds */
   --heading-color: #ffffff;      /* White headings on dark backgrounds */
   --surface-color: #333333;      /* Slightly lighter dark for surfaces within dark sections */
