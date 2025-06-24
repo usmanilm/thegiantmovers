@@ -19,37 +19,37 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #001973; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0d42ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; /* Primary background color for most sections */
+  --default-color: #333333;    /* Default text color for general content - a dark grey for good contrast */
+  --heading-color: #1a1a1a;    /* Dark color for headings - nearly black for strong presence */
+  --accent-color: #FFC72C;     /* The Giant Movers' Brand Yellow/Gold */
+  --surface-color: #ffffff;    /* Background for cards, form backgrounds, etc. */
+  --contrast-color: #1a1a1a;   /* Color for text on accent background (e.g., buttons), ensuring readability on yellow */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.6);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0d42ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(255, 255, 255, 0.7);  /* Light color for nav links against dark header */
+  --nav-hover-color: #ffffff;            /* White for hover/active on nav links */
+  --nav-mobile-background-color: #ffffff; /* White background for mobile nav */
+  --nav-dropdown-background-color: #ffffff; /* White background for dropdowns */
+  --nav-dropdown-color: #333333;         /* Dark text for dropdown links */
+  --nav-dropdown-hover-color: #FFC72C;    /* Yellow/Gold for dropdown link hover */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f7f9fc;
+  --background-color: #f7f9fc; /* A very light grey for subtle distinction */
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #0e1d34;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #19335c;
-  --contrast-color: #ffffff;
+  --background-color: #1a1a1a;    /* Deep black/dark grey for backgrounds that contrast with yellow */
+  --default-color: #ffffff;      /* White text on dark backgrounds */
+  --heading-color: #ffffff;      /* White headings on dark backgrounds */
+  --surface-color: #333333;      /* Slightly lighter dark for surfaces within dark sections */
+  --contrast-color: #ffffff;     /* White text on dark elements */
 }
 
 /* Smooth scroll */
@@ -114,7 +114,7 @@ h6 {
   border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  background: rgba(198, 16, 0, 0); /* Keeping original transparent red from template for effect, but could be adjusted */
 }
 
 .pulsating-play-btn:after {
@@ -170,7 +170,7 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #df1529; /* Standard error red */
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -181,7 +181,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #059652; /* Standard success green */
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -222,8 +222,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
-  --heading-color: #ffffff;
+  --background-color: rgba(255, 255, 255, 0); /* Transparent on top */
+  --heading-color: #ffffff; /* White headings in transparent header */
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
@@ -288,7 +288,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(14, 29, 52, 0.9);
+  --background-color: rgba(26, 26, 26, 0.9); /* Dark header on scroll to match branding */
 }
 
 /*--------------------------------------------------------------
@@ -493,12 +493,12 @@ h6 {
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    background-color: rgba(51, 51, 51, 0.1); /* Lighter shade of dark for nested dropdown on mobile */
   }
 
   .navmenu .dropdown>.dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    background-color: rgba(51, 51, 51, 0.05); /* Very light dark for active dropdown on mobile */
   }
 
   .mobile-nav-active {
@@ -519,7 +519,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgba(26, 26, 26, 0.8); /* Dark overlay for mobile nav */
     transition: 0.3s;
   }
 
@@ -581,8 +581,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--default-color);
-  border-color: var(--default-color);
+  color: var(--accent-color); /* Changed to accent color on hover for social links */
+  border-color: var(--accent-color); /* Changed to accent color on hover for social links */
 }
 
 .footer h4 {
@@ -625,7 +625,7 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--default-color);
+  color: var(--accent-color); /* Changed to accent color on hover for footer links */
 }
 
 .footer .footer-contact p {
@@ -648,7 +648,7 @@ h6 {
 }
 
 .footer .credits a {
-  color: var(--default-color);
+  color: var(--accent-color); /* Changed to accent color for credits link */
 }
 
 /*--------------------------------------------------------------
@@ -1289,7 +1289,7 @@ section,
 }
 
 .pricing ul i {
-  color: #059652;
+  color: #059652; /* Keeping success green for checkmarks */
   font-size: 24px;
   padding-right: 3px;
 }
@@ -1418,7 +1418,7 @@ section,
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
+  color: #FFC72C; /* Gold/Yellow for stars */
   margin: 0 1px;
 }
 
@@ -1551,7 +1551,7 @@ section,
 }
 
 .faq .faq-container .faq-active {
-  background-color: var(--heading-color);
+  background-color: var(--heading-color); /* This will be the dark color from dark-background if applied, or a default dark. */
   transition: 0.3s;
 }
 
@@ -1661,7 +1661,7 @@ section,
 }
 
 .team .member .social a:hover {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Changed to accent color on hover for social icons */
 }
 
 .team .member .social i {
@@ -1784,7 +1784,7 @@ section,
 }
 
 .alt-pricing .pricing-item ul i {
-  color: #059652;
+  color: #059652; /* Keeping success green for checkmarks */
   font-size: 24px;
   padding-right: 3px;
 }
@@ -1828,8 +1828,7 @@ section,
 .alt-pricing .featured h4 span,
 .alt-pricing .featured ul,
 .alt-pricing .featured ul .na,
-.alt-pricing .featured ul i,
-.alt-pricing .featured ul .na i {
+.alt-pricing .featured ul i {
   color: var(--contrast-color);
 }
 
@@ -1891,7 +1890,7 @@ section,
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 20%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
@@ -1963,7 +1962,9 @@ section,
 
 .get-a-quote .php-email-form input[type=text],
 .get-a-quote .php-email-form input[type=email],
-.get-a-quote .php-email-form textarea {
+.get-a-quote .php-email-form textarea,
+.get-a-quote .php-email-form input[type=date], /* Added for consistency with updated get-a-quote form */
+.get-a-quote .php-email-form select { /* Added for consistency with updated get-a-quote form */
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
@@ -1975,13 +1976,17 @@ section,
 
 .get-a-quote .php-email-form input[type=text]:focus,
 .get-a-quote .php-email-form input[type=email]:focus,
-.get-a-quote .php-email-form textarea:focus {
+.get-a-quote .php-email-form textarea:focus,
+.get-a-quote .php-email-form input[type=date]:focus, /* Added for consistency */
+.get-a-quote .php-email-form select:focus { /* Added for consistency */
   border-color: var(--accent-color);
 }
 
 .get-a-quote .php-email-form input[type=text]::placeholder,
 .get-a-quote .php-email-form input[type=email]::placeholder,
-.get-a-quote .php-email-form textarea::placeholder {
+.get-a-quote .php-email-form textarea::placeholder,
+.get-a-quote .php-email-form input[type=date]::placeholder, /* Added for consistency */
+.get-a-quote .php-email-form select::placeholder { /* Added for consistency */
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
