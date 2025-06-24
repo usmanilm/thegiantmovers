@@ -42,9 +42,9 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
         <img src="https://thegiantmovers.com/wp-content/uploads/2022/12/Logo.svg" alt="The Giant Movers Logo" style="height: 50px;">
-        </a>
+      </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -105,26 +105,27 @@
           <div class="col-lg-5 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div>
 
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-            <form action="forms/get-a-quote.php" method="post" class="php-email-form">
+            <!-- Updated form action to point to '#' and added an ID for easier JavaScript targeting -->
+            <form id="quoteForm" action="#" method="post" class="php-email-form">
               <h3>Request Your Moving Estimate</h3>
               <p>Provide us with details about your upcoming relocation in the UAE, and our team will prepare a precise and transparent quote for you.</p>
 
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="departure_location" class="form-control" placeholder="Current Location (e.g., Dubai Marina, Al Barsha)" required="">
+                  <input type="text" name="departure_location" id="departure_location" class="form-control" placeholder="Current Location (e.g., Dubai Marina, Al Barsha)" required="">
+                </div>
+
+                <div class="md-6">
+                  <input type="text" name="delivery_location" id="delivery_location" class="form-control" placeholder="Destination (e.g., Abu Dhabi, Jumeirah Village Circle)" required="">
                 </div>
 
                 <div class="col-md-6">
-                  <input type="text" name="delivery_location" class="form-control" placeholder="Destination (e.g., Abu Dhabi, Jumeirah Village Circle)" required="">
+                  <input type="date" name="preferred_move_date" id="preferred_move_date" class="form-control" placeholder="Preferred Moving Date" required="">
                 </div>
 
                 <div class="col-md-6">
-                  <input type="date" name="preferred_move_date" class="form-control" placeholder="Preferred Moving Date" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <select name="type_of_property" class="form-control" required="">
+                  <select name="type_of_property" id="type_of_property" class="form-control" required="">
                     <option value="">Select Type of Property</option>
                     <option value="apartment">Apartment</option>
                     <option value="villa">Villa</option>
@@ -135,7 +136,7 @@
                 </div>
 
                 <div class="col-md-6">
-                  <select name="number_of_bedrooms" class="form-control">
+                  <select name="number_of_bedrooms" id="number_of_bedrooms" class="form-control">
                     <option value="">Number of Bedrooms (if residential)</option>
                     <option value="studio">Studio</option>
                     <option value="1_bedroom">1 Bedroom</option>
@@ -146,7 +147,7 @@
                 </div>
 
                 <div class="col-md-6">
-                  <select name="service_needed" class="form-control" required="">
+                  <select name="service_needed" id="service_needed" class="form-control" required="">
                     <option value="">Select Service Needed</option>
                     <option value="residential_moving">Residential Moving</option>
                     <option value="commercial_moving">Commercial Moving</option>
@@ -163,25 +164,25 @@
                 </div>
 
                 <div class="col-12">
-                  <input type="text" name="name" class="form-control" placeholder="Your Full Name" required="">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your Full Name" required="">
                 </div>
 
                 <div class="col-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email Address" required="">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address" required="">
                 </div>
 
                 <div class="col-12">
-                  <input type="tel" class="form-control" name="phone" placeholder="Your Phone Number (e.g., +971 50 123 4567)" required="">
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone Number (e.g., +971 50 123 4567)" required="">
                 </div>
 
                 <div class="col-12">
-                  <textarea class="form-control" name="additional_message" rows="6" placeholder="Tell us more about your specific moving requirements, any special items, or questions you may have." required=""></textarea>
+                  <textarea class="form-control" name="additional_message" id="additional_message" rows="6" placeholder="Tell us more about your specific moving requirements, any special items, or questions you may have." required=""></textarea>
                 </div>
 
                 <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Preparing your email...</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your moving quote request has been sent successfully. We will contact you shortly!</div>
+                  <div class="sent-message">Your email client is opening with your quote request. Please click 'Send' in your email application.</div>
 
                   <button type="submit">Get Your Free Quote</button>
                 </div>
@@ -221,8 +222,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -270,7 +272,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -279,6 +280,83 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('quoteForm');
+      const loadingMessage = form.querySelector('.loading');
+      const errorMessage = form.querySelector('.error-message');
+      const sentMessage = form.querySelector('.sent-message');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Clear previous messages
+        loadingMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        sentMessage.style.display = 'none';
+
+        loadingMessage.style.display = 'block'; // Show loading message
+
+        let formData = [];
+        let subject = "New Moving Quote Request from Website";
+        let clientEmail = '';
+        let clientName = '';
+
+        // Iterate over form elements to collect data
+        this.querySelectorAll('input, select, textarea').forEach(input => {
+          let label = '';
+          let value = input.value;
+
+          // Use placeholder as label if available, otherwise input name
+          if (input.placeholder) {
+            label = input.placeholder;
+          } else if (input.id) {
+            // Try to find a corresponding label element
+            const labelElement = document.querySelector(`label[for="${input.id}"]`);
+            if (labelElement) {
+              label = labelElement.innerText.trim();
+            } else {
+              label = input.name.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()); // Format name
+            }
+          } else {
+            label = input.name.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()); // Fallback to formatted name
+          }
+
+          // Special handling for select elements to get text content of selected option
+          if (input.tagName === 'SELECT' && input.options[input.selectedIndex]) {
+            value = input.options[input.selectedIndex].text;
+          }
+
+          // Capture client's name and email for the email subject/recipient
+          if (input.name === 'name') {
+            clientName = value;
+            subject = `New Moving Quote for ${clientName}`; // Customize subject
+          }
+          if (input.name === 'email') {
+            clientEmail = value;
+          }
+
+          formData.push(`${label}: ${value}`);
+        });
+
+        const emailBody = "Dear The Giant Movers Team,\n\nYou have received a new moving quote request from your website with the following details:\n\n" + formData.join('\n') + "\n\nClient Name: " + clientName + "\nClient Email: " + clientEmail + "\n\nBest regards,\nWebsite Visitor";
+
+        const mailtoLink = `mailto:info@thegiantmovers.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+        // Attempt to open the email client
+        try {
+          window.location.href = mailtoLink;
+          loadingMessage.style.display = 'none';
+          sentMessage.style.display = 'block'; // Show success message
+        } catch (e) {
+          loadingMessage.style.display = 'none';
+          errorMessage.textContent = "Error opening email client. Please try again or contact us directly at info@thegiantmovers.com.";
+          errorMessage.style.display = 'block'; // Show error message
+          console.error("Mailto link failed: ", e);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
