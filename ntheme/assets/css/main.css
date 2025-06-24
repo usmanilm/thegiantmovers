@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.7);  /* Light color for nav links against dark header */
+  --nav-color: rgba(0, 0, 0, 0.7);  /* Light color for nav links against dark header */
   --nav-hover-color: #ffffff;            /* White for hover/active on nav links */
   --nav-mobile-background-color: #ffffff; /* White background for mobile nav */
   --nav-dropdown-background-color: #ffffff; /* White background for dropdowns */
@@ -288,7 +288,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(26, 26, 26, 0.9); /* Dark header on scroll to match branding */
+  --background-color: rgba(235, 235, 235, 0.9); /* Dark header on scroll to match branding */
 }
 
 /*--------------------------------------------------------------
