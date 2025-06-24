@@ -21,7 +21,7 @@
 :root { 
   --background-color: #ffffff; /* Primary background color for most sections */
   --default-color: #333333;    /* Default text color for general content - a dark grey for good contrast */
-  --heading-color: #f1f1f1;    /* Dark color for headings - nearly black for strong presence */
+  --heading-color: #858585;    /* Dark color for headings - nearly black for strong presence */
   --accent-color: #FFC72C;     /* The Giant Movers' Brand Yellow/Gold */
   --surface-color: #ffffff;    /* Background for cards, form backgrounds, etc. */
   --contrast-color: #1a1a1a;   /* Color for text on accent background (e.g., buttons), ensuring readability on yellow */
