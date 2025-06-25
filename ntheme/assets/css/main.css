@@ -875,6 +875,14 @@ section,
   padding: 120px 0 60px 0;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Cover the entire hero section */
+    background-color: rgba(0, 0, 0, 0.4); /* Black color with 40% opacity */
+    z-index: 2; /* Ensure it sits above the background image (z-index 1) but below content */
+}
+
 .hero .hero-bg {
   position: absolute;
   inset: 0;
@@ -883,11 +891,6 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-}
-.hero .hero-bg:before {
-  position: absolute;
-  inset: 0;
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
 }
 .hero .container {
   position: relative;
