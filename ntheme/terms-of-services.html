@@ -15,8 +15,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -42,22 +42,26 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Replace 'Logis' with your company logo if available, or keep text -->
-        <!-- <img src="assets/img/logo.png" alt="The Giant Movers Logo"> -->
-        <h1 class="sitename">The Giant Movers</h1>
-      </a>
+       <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="https://thegiantmovers.com/wp-content/uploads/2022/12/Logo.svg" alt="The Giant Movers Logo" style="height: 50px;">
+        </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home<br></a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li class="dropdown"><a href="services.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="residential-moving.html">Residential Moving</a></li>
+            <li><a href="commercial-moving.html">Commercial Moving</a></li>
+            <li><a href="package-storage.html">Packaging & Storage</a></li>
+          </ul>
+          </li>
           <li><a href="pricing.html">Pricing</a></li>
           <li class="dropdown"><a href="#"><span>Relocation Guides</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Moving to Dubai</a></li>
-              <li class="dropdown"><a href="#"><span>UAE Moving Tips</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="move-to-dubai.html"><span>UAE Moving Tips</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Packing Tips</a></li>
                   <li><a href="#">Villa Moving Checklist</a></li>
@@ -75,6 +79,7 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
 
       <a class="btn-getstarted" href="get-a-quote.html">Get a Quote</a>
 
@@ -201,7 +206,7 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -209,7 +214,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">The Giant Movers</span>
           </a>
-          <p>The Giant Movers is your premier partner for all relocation services in UAE. Committed to excellence, we ensure a smooth, efficient, and stress-free move, whether it's across Dubai or around the globe.</p>
+          <p>Your trusted partner for hassle-free residential and commercial moving, packing, and storage services in Dubai. Experience a seamless relocation with our expert team.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -224,29 +229,29 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="terms-of-services.html">Terms of service</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="services.html#residential">Residential Moving</a></li>
-            <li><a href="services.html#commercial">Commercial Moving</a></li>
-            <li><a href="services.html#international">International Relocation</a></li>
-            <li><a href="services.html#packing">Packing & Unpacking</a></li>
-            <li><a href="services.html#storage">Storage Solutions</a></li>
+            <li><a href="residential-moving.html">Residential Moving</a></li>
+            <li><a href="commercial-moving.html">Commercial Moving</a></li>
+            <li><a href="services.html">Professional Packing</a></li>
+            <li><a href="services.html">Secure Storage</a></li>
+            <li><a href="services.html">Permit Assistance</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>Office 101, Al Barsha Business Center</p>
-          <p>Al Barsha 1, Dubai, UAE</p>
-          <p>United Arab Emirates</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+971 55 123 4567</span></p>
-          <p><strong>Email:</strong> <span>info@thegiantmovers.com</span></p>
+          <p>Business Center 1, M Floor</p>
+          <p>The Meydan Hotel, Nad Al Sheba</p>
+          <p>Dubai, UAE</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+971 4 439 7693</span></p>
+          <p><strong>Email:</strong> <span>contact@thegiantmovers.com</span></p>
         </div>
 
       </div>
@@ -255,19 +260,12 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">The Giant Movers</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+  
   <!-- Preloader -->
   <div id="preloader"></div>
 
